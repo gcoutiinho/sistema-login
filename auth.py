@@ -28,32 +28,26 @@ def criar_conta(usuarios):
 
 def entrar_conta(usuarios):
 
-    i = 3
+    tentativas = 3
 
-    while i > 0:
+    while tentativas > 0:
         print("\n----- SIGN IN -----")
-        username = input("Nome de usuário: ")
+        print(f"(Você tem {tentativas} tentativas)")
+        username = input("\nNome de usuário: ")
         senha = input("Senha: ")
 
-        
-        
-        if username in usuarios:
-            if senha == usuarios[username]["senha"]:
-                print(f"\nSeja bem vindo(a) {usuarios[username]["nome"]}")
-                break
-            else:
-                i -= 1
-                print("\nSenha Inválida!")
-                if i == 0:
-                    print("Acabou suas tentativas")
-                else:
-                    print(f"Você tem mais {i} tentativas")
-                    continue
-        else:
-            i -= 1
+        if username not in usuarios:
+            tentativas -= 1
             print("\nUsuário Inválido!")
-            if i == 0:
-                print("Acabou suas tentativas")
-            else:
-                print(f"Você tem mais {i} tentativas")
-                continue
+            continue
+
+        if senha != usuarios[username]['senha']:
+            tentativas -= 1
+            print("\nSenha Inválida!")
+            continue
+        
+        print(f"\nSeja bem vindo(a) {usuarios[username]['nome']}")
+        return username
+
+    print("\nAcabaram as tentativas...")
+    return None
