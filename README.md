@@ -1,6 +1,6 @@
 # Sistema de Login em Python
 
-Um sistema simples de login em Python, que permite ao usuário inserir credenciais (usuário e senha) para acessar um menu de funcionalidades (**ainda estou implementando**). Ideal como projeto de estudo ou base para sistemas maiores.
+Um sistema simples de login em Python, que permite ao usuário inserir credenciais (usuário e senha) para acessar um menu de funcionalidades. Ideal como projeto de estudo ou base para sistemas maiores.
 
 ## 📌 Visão Geral
 
