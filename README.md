@@ -14,7 +14,11 @@ Este projeto implementa um fluxo de autenticação básica em Python com funcion
 
 ## 🚀 Funcionalidades
 
-✔️ Permite cadastro e autenticação de usuários.  
+- ✔️ Permite cadastro e autenticação de usuários.
+- 👀 Visualizar dados do usuário logado.
+- 🔄 Alterar senha do usuário.
+- 💾 Salva dados do usuário automaticamente em arquivo JSON
+- 📃 Carregar dados ao iniciar o programa
 
 
 ## 🧠 Tecnologias
@@ -22,6 +26,7 @@ Este projeto implementa um fluxo de autenticação básica em Python com funcion
 Esse projeto foi desenvolvido com:
 
 - **Python 3** — Linguagem principal do sistema
+- Biblioteca padrão `json`
 
 ## 📁 Estrutura do Projeto
 
@@ -29,11 +34,13 @@ sistema-login/
 
 ├── auth.py
 
-├── main.
+├── main.py
 
-├── menu.py
+├── menus.py
 
-├── LICENSE
+├── usuario.py
+
+├── storage.py
 
 └── README.md
 
